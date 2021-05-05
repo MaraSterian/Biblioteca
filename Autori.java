@@ -15,20 +15,19 @@ public class Autori implements Tiparire {
     public void tiparire_carte() {}
 
     public void tiparire_autori() {
+        System.out.println();
         setNume(nume);
         System.out.println("Autorul: " + getNume());
         setNationalitate(nationalitate);
         System.out.println("nationalitate: " + getNationalitate());
         toString();
-        System.out.println("\n");
     }
 
     @Override
     public String toString() {
-        return "Autor{" +
-                "nume: " + nume +
-                ", nationalitate: " + nationalitate +
-                '}';
+        return " Autor " +
+                "nume: " + nume + " - " +
+                "nationalitate: " + nationalitate;
     }
 
     public String getNume() {
@@ -50,4 +49,5 @@ public class Autori implements Tiparire {
     public List<Carti> getCarti() {
         return carti;
     }
+
 }

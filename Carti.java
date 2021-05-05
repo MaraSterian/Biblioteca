@@ -15,19 +15,19 @@ public class Carti implements Tiparire {
         autor.carti.add(this);
     }
     public void tiparire_carte() {
+        System.out.println();
         setNume(nume);
         System.out.println("Cartea: " + getNume());
         setEditura(editura);
         System.out.println("editura: " + getEditura());
         setPret(pret);
-        System.out.println("pret: " + getPret());
+        System.out.println("pret: " + getPret() + " RON");
         setAutor(autor);
         getAutor();
         toString();
-        System.out.println("\n");
     }
 
-    @Override
+    /*@Override
     public String toString() {
         return "Carti{" +
                 "nume: " + nume +
@@ -35,7 +35,7 @@ public class Carti implements Tiparire {
                 ", pret: " + pret +
                 ", autor: " + autor +
                 '}';
-    }
+    }*/
 
     @Override
     public void tiparire_autori() {}

@@ -17,14 +17,10 @@ public class Sectiuni {
 
     List<Carti> listaCarti = new ArrayList<>();
 
-    public static void main(String[] args) {
-        Sectiuni sectiune1 = new Sectiuni("Educatie");
-        Sectiuni sectiune2 = new Sectiuni("Literatura");
-        Set setSectiuni = new HashSet<String>();
-
-        setSectiuni.add(sectiune1);
-        setSectiuni.add(sectiune2);
-
-        System.out.println(setSectiuni);
+    @Override
+    public String toString() {
+        return "Sectiune " +
+                "nume: " + nume ;
     }
+    //public static void main(String[] args) {}
 }

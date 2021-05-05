@@ -1,16 +1,13 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
 public class Cititori implements Comparable {
     private String nume;
-    private int id_permis;
+    protected int id_permis;
 
     public Cititori(String nume, int id_permis) {
         this.nume = nume;
         this.id_permis = id_permis;
     }
+
+    public Cititori() {}
 
     public String getNume() {
         return nume;
@@ -30,22 +27,12 @@ public class Cititori implements Comparable {
 
     @Override
     public String toString() {
-        return "Cititor{" +
+        return "Cititor " +
                 "nume: " + nume +
-                ", id_permis: " + id_permis +
-                '}';
+                " id_permis: " + id_permis ;
     }
 
-    public static void main(String[] args) {
-        Cititori cititor1 = new Cititori("Marin Costel", 98765);
-        Cititori cititor2 = new Cititori("Deliu Anca", 98787);
-        Cititori cititor3 = new Cititori("Codlea Vasile", 99852);
-
-        List<Cititori> listaCititori = new ArrayList<>();
-        listaCititori.addAll(Arrays.asList(cititor1, cititor2, cititor3));
-        Collections.sort(listaCititori);
-        System.out.println("Cititori: " + listaCititori);
-    }
+    //public static void main(String[] args) {}
 
     @Override
     public int compareTo(Object o) {
